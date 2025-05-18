@@ -80,8 +80,12 @@ cd file-version-control-system
 pnpm install
 ```
 
-### 3. Run both projects from root directory `apps/backend` and `apps/client`: 
+### 3. Run both projects from root directory `apps/backend` and `apps/client`:
 ```bash
 npm run client
 npm run backend
+```
+### 3. Also added A REST API docs in json file:
+```bash
+Rest API.postman_collection.json
 ```
