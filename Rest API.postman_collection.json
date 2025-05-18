@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "8a3013db-e643-49b5-a932-f2ce8c532689",
+		"name": "Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17580276"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dinesh Kumar\",\n    \"email\": \"dinesh@gmail.com\",\n    \"password\": 12345678\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dinesh@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Repository",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateFileOrFolder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"text.txt\",\n    \"parent\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/68284ceb8f2ee0be7946f146/file"
+					},
+					"response": []
+				},
+				{
+					"name": "GetFileOrFolder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}/repository/68284ceb8f2ee0be7946f146"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Fille Content",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}/repository/682979fd067675bc006363d7/content"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dinesh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/682833adf10d07ad070484df"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newName\": \"Dinesh1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/rename/6828348a33dc167e32bd06f3"
+					},
+					"response": []
+				},
+				{
+					"name": "Update File Content",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dinesh1\",\n    \"content\": \"New content\",\n    \"commitMsg\": \"File updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/update/682979fd067675bc006363d7"
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository"
+					},
+					"response": []
+				},
+				{
+					"name": "Shared WIth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"Dinesh1\",\n    \"repoId\": \"New content\",\n    \"permission\": \"File updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/share"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Repository One",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"Dinesh1\",\n    \"repoId\": \"New content\",\n    \"permission\": \"File updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/get-one/682979e7067675bc006363cb"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shared With Repo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"Dinesh1\",\n    \"repoId\": \"New content\",\n    \"permission\": \"File updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{API_URL}}/repository/share/682979e7067675bc006363cb"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjgwZjI0OWM3ZTM1YWRhMTUyMzMwNyIsImlhdCI6MTc0NzU0NzczMSwiZXhwIjoxNzQ3NjM0MTMxfQ.itKuv__fdVSeT03Oxb0nTRJV-C73tH2UaShKkvtOWDI"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Versions",
+			"item": [
+				{
+					"name": "Get Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}/versions/682979fd067675bc006363d9"
+					},
+					"response": []
+				},
+				{
+					"name": "All File Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{API_URL}}/versions/all/6829617c688071df7eaf81e3"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjgwZjI0OWM3ZTM1YWRhMTUyMzMwNyIsImlhdCI6MTc0NzU0NzczMSwiZXhwIjoxNzQ3NjM0MTMxfQ.itKuv__fdVSeT03Oxb0nTRJV-C73tH2UaShKkvtOWDI"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjgwZjI0OWM3ZTM1YWRhMTUyMzMwNyIsImlhdCI6MTc0NzU0NzczMSwiZXhwIjoxNzQ3NjM0MTMxfQ.itKuv__fdVSeT03Oxb0nTRJV-C73tH2UaShKkvtOWDI"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
